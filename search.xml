@@ -5,10 +5,17 @@
     <entry>
       <title><![CDATA[Hexo命令清单]]></title>
       <url>/2017/12/18/Hexo%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/</url>
-      <content type="html"><![CDATA[<h1 id="Hexo-常用命令集合"><a href="#Hexo-常用命令集合" class="headerlink" title="Hexo 常用命令集合"></a>Hexo 常用命令集合</h1><p>创建文章</p>
+      <content type="html"><![CDATA[<p>官方地址：</p>
+<p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></p>
+<p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">https://hexo.io/docs/</a></p>
+<p><a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html</a></p>
+<p><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues</a></p>
+<p>创建文章</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
 <p>重新生成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>发布更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
