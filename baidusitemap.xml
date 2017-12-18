@@ -3,6 +3,46 @@
 
 
     
+  <url>
+    <loc>https://yixiaoming.github.io/2017/12/18/Hexo%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2017-12-18T04:41:08.155Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo命令清单</title>
+        <pubTime>2017-12-18T04:37:04.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://yixiaoming.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yixiaoming.github.io/2014/12/22/hello-world/</loc>
+    <lastmod>2017-12-18T04:38:34.956Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2014-12-22T04:39:04.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://yixiaoming.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://yixiaoming.github.io/2017/11/26/Android-%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD-so/</loc>
@@ -20,26 +60,6 @@
            
              
               <breadCrumb title="Android" url="https://yixiaoming.github.io/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://yixiaoming.github.io/2014/12/22/hello-world/</loc>
-    <lastmod>2017-12-17T02:56:19.446Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2014-12-22T04:39:04.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="https://yixiaoming.github.io/categories/Hexo/"/>
           
         </display>
     </data>

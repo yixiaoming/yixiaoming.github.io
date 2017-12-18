@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[Hexo命令清单]]></title>
+      <url>/2017/12/18/Hexo%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/</url>
+      <content type="html"><![CDATA[<h1 id="Hexo-常用命令集合"><a href="#Hexo-常用命令集合" class="headerlink" title="Hexo 常用命令集合"></a>Hexo 常用命令集合</h1><p>创建文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
+<p>重新生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android 动态加载 so]]></title>
       <url>/2017/11/26/Android-%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD-so/</url>
       <content type="html"><![CDATA[<h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><p>在平常开发中，我们经常会遇到Android引入C++开发的库，就需要用到so文件。通常我们是直接讲so文件引入到项目的 <code>libs/...</code> 目录下</p>
