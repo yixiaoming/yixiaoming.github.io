@@ -75,18 +75,18 @@
 
 
 
-<meta name="description" content="官方地址： https://hexo.io https://hexo.io/docs/ https://hexo.io/docs/troubleshooting.html https://github.com/hexojs/hexo/issues 创建文章 1$ hexo new &amp;quot;My New Po">
+<meta name="description" content="常用命令创建文章, layout可使用 post(默认), draft(草稿), page … 1$ hexo new [layout] &amp;quot;Article Name&amp;quot; 发布草稿 1$ hexo publish [layout] &amp;lt;title&amp;gt; 生成静态文件">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo命令清单">
 <meta property="og:url" content="https://yixiaoming.github.io/2017/12/18/Hexo命令清单/index.html">
 <meta property="og:site_name" content="Yi Xiaoming&#39;s blog">
-<meta property="og:description" content="官方地址： https://hexo.io https://hexo.io/docs/ https://hexo.io/docs/troubleshooting.html https://github.com/hexojs/hexo/issues 创建文章 1$ hexo new &amp;quot;My New Post&amp;quot; 重新生成 1$ hexo generate 发布更新 1$ hexo">
+<meta property="og:description" content="常用命令创建文章, layout可使用 post(默认), draft(草稿), page … 1$ hexo new [layout] &amp;quot;Article Name&amp;quot; 发布草稿 1$ hexo publish [layout] &amp;lt;title&amp;gt; 生成静态文件 12$ hexo generate$ hexo g 发布更新 12$ hexo deploy$ hexo d">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-18T04:51:29.580Z">
+<meta property="og:updated_time" content="2017-12-24T12:18:48.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo命令清单">
-<meta name="twitter:description" content="官方地址： https://hexo.io https://hexo.io/docs/ https://hexo.io/docs/troubleshooting.html https://github.com/hexojs/hexo/issues 创建文章 1$ hexo new &amp;quot;My New Post&amp;quot; 重新生成 1$ hexo generate 发布更新 1$ hexo">
+<meta name="twitter:description" content="常用命令创建文章, layout可使用 post(默认), draft(草稿), page … 1$ hexo new [layout] &amp;quot;Article Name&amp;quot; 发布草稿 1$ hexo publish [layout] &amp;lt;title&amp;gt; 生成静态文件 12$ hexo generate$ hexo g 发布更新 12$ hexo deploy$ hexo d">
 
 
 
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  47
+                  112
                 </span>
               
 
@@ -418,17 +418,22 @@
       
 
       
-        <p>官方地址：</p>
-<p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></p>
+        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p>创建文章, layout可使用 post(默认), draft(草稿), page …</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &quot;Article Name&quot;</span><br></pre></td></tr></table></figure>
+<p>发布草稿</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>生成静态文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>发布更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>生成并发布</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<p>启动本地server查看, 默认： localhost:4000, 可自行指定参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<h1 id="官方地址："><a href="#官方地址：" class="headerlink" title="官方地址："></a>官方地址：</h1><p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></p>
 <p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">https://hexo.io/docs/</a></p>
 <p><a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html</a></p>
 <p><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues</a></p>
-<p>创建文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
-<p>重新生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>发布更新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -557,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -588,7 +602,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -599,7 +613,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -652,17 +666,58 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.baidu.com/" title="Title" target="_blank">Title</a>
+                    <a href="http://www.jikedaohang.com" title="极客导航" target="_blank">极客导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/zhuanlan/all" title="掘金专栏" target="_blank">掘金专栏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.wanandroid.com/index" title="玩Android" target="_blank">玩Android</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.calm.com/" title="Calm" target="_blank">Calm</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.diycode.cc/categories/Android" title="DiyCode" target="_blank">DiyCode</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://e.xitu.io" title="掘金酱" target="_blank">掘金酱</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://progit.bootcss.com" title="Pro Git 2nd" target="_blank">Pro Git 2nd</a>
                   </li>
                 
               </ul>
             </div>
           
 
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=2018229178&auto=1&height=32"></iframe>
+          <div style="height:20px;"></div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=2018229178&auto=0&height=32"></iframe>
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#官方地址："><span class="nav-number">2.</span> <span class="nav-text">官方地址：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -691,7 +746,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">47</span>
+    <span title="Site words total count">112</span>
   
 </div>
 
