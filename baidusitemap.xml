@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://yixiaoming.github.io/2017/12/18/Hexo%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/</loc>
-    <lastmod>2017-12-28T05:02:45.431Z</lastmod>
+    <lastmod>2017-12-31T04:06:39.782Z</lastmod>
     <data>
         <display>
         <title>Hexo命令清单</title>
@@ -17,6 +17,28 @@
            
              
               <breadCrumb title="Hexo" url="https://yixiaoming.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yixiaoming.github.io/2017/12/31/Gradle3-0%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2017-12-31T04:05:13.120Z</lastmod>
+    <data>
+        <display>
+        <title>Gradle3.0多渠道打包详解</title>
+        <pubTime>2017-12-31T03:41:28.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>打包</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://yixiaoming.github.io/categories/Android/"/>
           
         </display>
     </data>
