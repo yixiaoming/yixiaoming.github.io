@@ -83,12 +83,12 @@
 <meta property="og:site_name" content="Yi Xiaoming&#39;s blog">
 <meta property="og:description" content="介绍本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://yixiaoming.github.io/2019/03/24/ViewModel源码解读/Volumes/External/Codes/yixiaoming.github.io.source/source/_posts/ViewModel源码解读/image-20190324121438517.png">
-<meta property="og:updated_time" content="2019-03-24T04:17:20.000Z">
+<meta property="og:image" content="https://yixiaoming.github.io/2019/03/24/ViewModel源码解读/ViewModel源码解读/image-20190324122440712.png">
+<meta property="og:updated_time" content="2019-03-24T04:38:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ViewModel源码解读">
 <meta name="twitter:description" content="介绍本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activi">
-<meta name="twitter:image" content="https://yixiaoming.github.io/2019/03/24/ViewModel源码解读/Volumes/External/Codes/yixiaoming.github.io.source/source/_posts/ViewModel源码解读/image-20190324121438517.png">
+<meta name="twitter:image" content="https://yixiaoming.github.io/2019/03/24/ViewModel源码解读/ViewModel源码解读/image-20190324122440712.png">
 
 
 
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,149
+                  2,134
                 </span>
               
 
@@ -420,9 +420,7 @@
       
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activity等组件onDestroy()时自动清除数据避免内存泄漏。</p>
-<p>先来一张简图：</p>
-<p><img src="/2019/03/24/ViewModel源码解读/Volumes/External/Codes/yixiaoming.github.io.source/source/_posts/ViewModel源码解读/image-20190324121438517.png" alt="image-20190324121438517"></p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activity等组件onDestroy()时自动清除数据避免内存泄漏。<br>先来一张简图：<br><img src="/2019/03/24/ViewModel源码解读/./ViewModel源码解读/image-20190324122440712.png" alt="image-20190324122440712"></p>
 <a id="more"></a>
 <h2 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h2><h3 id="使用方法（官网例子）"><a href="#使用方法（官网例子）" class="headerlink" title="使用方法（官网例子）"></a>使用方法（官网例子）</h3><p>第1步：声明ViewModel组件</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyViewModel</span> <span class="keyword">extends</span> <span class="title">ViewModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> MutableLiveData&lt;List&lt;User&gt;&gt; users;</span><br><span class="line">    <span class="keyword">public</span> LiveData&lt;List&lt;User&gt;&gt; getUsers() &#123;</span><br><span class="line">        <span class="keyword">if</span> (users == <span class="keyword">null</span>) &#123;</span><br><span class="line">            users = <span class="keyword">new</span> MutableLiveData&lt;List&lt;User&gt;&gt;();</span><br><span class="line">            loadUsers();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> users;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">loadUsers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Do an asynchronous operation to fetch users.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -431,7 +429,7 @@
 <h3 id="内容解读"><a href="#内容解读" class="headerlink" title="内容解读"></a>内容解读</h3><p>首先需要注意：</p>
 <ol>
 <li>ViewModel这家伙不是我们直接new出来的，而是通过ViewModelProviders创建来的，所以其不受Activity等组件生命周期的限制。</li>
-<li>如果对LiveData不了解，可以直接忽略，直接将它看成一个数据变量即可。</li>
+<li>如果对LiveData不了解，可以直接忽略。</li>
 </ol>
 <h4 id="ViewModelProviders-的创建"><a href="#ViewModelProviders-的创建" class="headerlink" title="ViewModelProviders 的创建"></a>ViewModelProviders 的创建</h4><p>那么ViewModel是怎么通过ViewModelProviders创建的呢？首先看<code>ViewModelProviders.of(this)</code>，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ViewModelProvider <span class="title">of</span><span class="params">(@NonNull FragmentActivity activity,</span></span></span><br><span class="line"><span class="function"><span class="params">        @Nullable Factory factory)</span> </span>&#123;</span><br><span class="line">    Application application = checkApplication(activity);</span><br><span class="line">    <span class="keyword">if</span> (factory == <span class="keyword">null</span>) &#123;</span><br><span class="line">        factory = ViewModelProvider.AndroidViewModelFactory.getInstance(application);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ViewModelProvider(ViewModelStores.of(activity), factory);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -479,7 +477,7 @@
 <li>通过<strong>ViewModelProvider.get(xxx.class)</strong>会先到每个组件的ViewModelStore中去找，如果找不到通过AndroidViewModelFactory创建并放到ViewModelStore中。</li>
 <li>当生命周期组件onDestroy的时候会清理ViewModelStore中的内容防止内存泄漏了，但是由于ConfigurationChange导致的onDestroy不会清理，因为会将ViewModel绑定到不因为configuration变化导致Activity销毁被清空的NonConfigurationInstances下，下一次重建依然会被获取到。</li>
 </ol>
-<h3 id="ViewModel的用法"><a href="#ViewModel的用法" class="headerlink" title="ViewModel的用法"></a>ViewModel的用法</h3><p>官网就给出了两大ViewModel的用途：</p>
+<h3 id="ViewModel的用法"><a href="#ViewModel的用法" class="headerlink" title="ViewModel的用法"></a>ViewModel的用法</h3><p>官网就给出了3大ViewModel的用途：</p>
 <ol>
 <li>结合LiveData，为View组件提供数据，并保证不因为Configuration变化导致数据丢失。</li>
 <li>Fragment之间数据共享。<code>SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);</code>同一个Activity下发不同Fragment可以通过传入Activity的context获取到相同的ViewModel对象。<strong>Why？同一个Activity获取同一个ViewModelStore，相同的.class获取到的就是相同的ViewModel。</strong></li>
