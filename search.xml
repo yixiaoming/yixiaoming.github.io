@@ -8,7 +8,7 @@
       <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>LiveData是Android Jetpack Conponent中一个重要的组件，它能将数据与Android生命周期组件(Activity/Fragment/Service等，注：下文讲解实例中直接将生命周期组件替换成Activity，其他组件大同小异)进行有机的绑定，当数据变化时只通知active的组件，当组件销毁时自动解除关系避免内存泄漏，避免了我们在生命周期中写很长的代码来拉去数据更新UI，将数据变化与UI Control分离开，非常好用。下文我们将分析LiveData源码是怎么做到的，文中例子代码直接来自于Android Developer官方文档示例代码。</p>
 <p>地址：<a href="https://developer.android.com/topic/libraries/architecture/livedata" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/architecture/livedata</a></p>
 <p>来一张简图：</p>
-<p><img src="/2019/03/24/LiveData源码解析/./LiveData源码解析/image-20190324221458032.png" alt=""></p>
+<p><img src="/2019/03/24/LiveData源码解析/./image-20190324221458032.png" alt=""></p>
 <a id="more"></a>
 <h2 id="LiveData代码示例"><a href="#LiveData代码示例" class="headerlink" title="LiveData代码示例"></a>LiveData代码示例</h2><ol>
 <li>创建ViewModel类，里面存放LiveData对象</li>
@@ -71,8 +71,6 @@
         
         
         <tags>
-            
-            <tag> Android </tag>
             
             <tag> Android Component </tag>
             
@@ -158,8 +156,6 @@
         
         <tags>
             
-            <tag> Android </tag>
-            
             <tag> Android Component </tag>
             
         </tags>
@@ -225,9 +221,7 @@
       
         <categories>
             
-            <category> Android </category>
-            
-            <category> 事件分发 </category>
+            <category> Android事件分发 </category>
             
         </categories>
         
@@ -266,7 +260,7 @@
       
         <categories>
             
-            <category> Android </category>
+            <category> Android打包 </category>
             
         </categories>
         
@@ -275,7 +269,7 @@
             
             <tag> Android </tag>
             
-            <tag> 打包 </tag>
+            <tag> Gradle </tag>
             
         </tags>
         
