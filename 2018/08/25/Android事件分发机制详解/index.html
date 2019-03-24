@@ -83,13 +83,14 @@
 <meta property="og:site_name" content="Yi Xiaoming&#39;s blog">
 <meta property="og:description" content="什么是View事件分发这里的事件是指手指触屏到屏幕（Down）到手指离开屏幕（Up，Cancel）以及中间一系列（Move），这一连串的事件也叫事件序列。在Android开发中了解事件分发机制很重要，自定义View以及处理滑动冲突的时候都需要用到。 虽然事件分发时包含了从down到up过程的事件序列，但是这里更倾向去将事件分发定义为事件Down的分发，因为Down事件会决定后续所有事件的走向。下面">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://yixiaoming.github.io/2018/08/25/Android事件分发机制详解/WX20180825-170921.png">
 <meta property="og:image" content="https://yixiaoming.github.io/2018/08/25/Android事件分发机制详解/1.png">
 <meta property="og:image" content="https://yixiaoming.github.io/2018/08/25/Android事件分发机制详解/WX20180825-170921.png">
-<meta property="og:updated_time" content="2018-08-25T09:40:25.000Z">
+<meta property="og:updated_time" content="2019-03-24T04:50:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android事件分发机制详解">
 <meta name="twitter:description" content="什么是View事件分发这里的事件是指手指触屏到屏幕（Down）到手指离开屏幕（Up，Cancel）以及中间一系列（Move），这一连串的事件也叫事件序列。在Android开发中了解事件分发机制很重要，自定义View以及处理滑动冲突的时候都需要用到。 虽然事件分发时包含了从down到up过程的事件序列，但是这里更倾向去将事件分发定义为事件Down的分发，因为Down事件会决定后续所有事件的走向。下面">
-<meta name="twitter:image" content="https://yixiaoming.github.io/2018/08/25/Android事件分发机制详解/1.png">
+<meta name="twitter:image" content="https://yixiaoming.github.io/2018/08/25/Android事件分发机制详解/WX20180825-170921.png">
 
 
 
@@ -393,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,811
+                  1,817
                 </span>
               
 
@@ -432,7 +433,7 @@
       
         <h2 id="什么是View事件分发"><a href="#什么是View事件分发" class="headerlink" title="什么是View事件分发"></a>什么是View事件分发</h2><p>这里的事件是指手指触屏到屏幕（Down）到手指离开屏幕（Up，Cancel）以及中间一系列（Move），这一连串的事件也叫事件序列。在Android开发中了解事件分发机制很重要，自定义View以及处理滑动冲突的时候都需要用到。</p>
 <p>虽然事件分发时包含了从down到up过程的事件序列，但是这里更倾向去将事件分发定义为事件Down的分发，因为Down事件会决定后续所有事件的走向。下面我们从实际的例子中来看View的事件时怎么分发的。</p>
-<a id="more"></a>
+<p>先来一张简图：<br><img src="/2018/08/25/Android事件分发机制详解/WX20180825-170921.png" alt="WX20180825-170921"><br><a id="more"></a></p>
 <h2 id="事件分发过程"><a href="#事件分发过程" class="headerlink" title="事件分发过程"></a>事件分发过程</h2><p>写一个层级大概如下的视图：</p>
 <p><img src="/2018/08/25/Android事件分发机制详解/1.png" alt="1.png"></p>
 <p>重写各个层级的Activity，ViewGroup，View的几个关键事件传递的方法。</p>

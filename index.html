@@ -415,7 +415,8 @@
 
       
         
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activity等组件onDestroy()时自动清除数据避免内存泄漏。<br>先来一张简图：<br><img src="/2019/03/24/ViewModel源码解读/./ViewModel源码解读/image-20190324122440712.png" alt="image-20190324122440712"></p>
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activity等组件onDestroy()时自动清除数据避免内存泄漏。</p>
+<p>先来一张简图：<br><img src="/2019/03/24/ViewModel源码解读/image-20190324122440712.png" alt="image-20190324122440712"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/24/ViewModel源码解读/#more" rel="contents">
@@ -570,7 +571,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,811
+                  1,817
                 </span>
               
 
@@ -610,6 +611,7 @@
         
           <h2 id="什么是View事件分发"><a href="#什么是View事件分发" class="headerlink" title="什么是View事件分发"></a>什么是View事件分发</h2><p>这里的事件是指手指触屏到屏幕（Down）到手指离开屏幕（Up，Cancel）以及中间一系列（Move），这一连串的事件也叫事件序列。在Android开发中了解事件分发机制很重要，自定义View以及处理滑动冲突的时候都需要用到。</p>
 <p>虽然事件分发时包含了从down到up过程的事件序列，但是这里更倾向去将事件分发定义为事件Down的分发，因为Down事件会决定后续所有事件的走向。下面我们从实际的例子中来看View的事件时怎么分发的。</p>
+<p>先来一张简图：<br><img src="/2018/08/25/Android事件分发机制详解/WX20180825-170921.png" alt="WX20180825-170921"><br></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/25/Android事件分发机制详解/#more" rel="contents">
