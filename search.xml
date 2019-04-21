@@ -72,7 +72,7 @@
         
         <tags>
             
-            <tag> Android Component </tag>
+            <tag> Android </tag>
             
         </tags>
         
@@ -156,7 +156,7 @@
         
         <tags>
             
-            <tag> Android Component </tag>
+            <tag> Android </tag>
             
         </tags>
         
@@ -229,47 +229,6 @@
         <tags>
             
             <tag> Android </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Gradle3.0多渠道打包详解]]></title>
-      <url>/2017/12/31/Gradle3-0%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%AF%A6%E8%A7%A3/</url>
-      <content type="html"><![CDATA[<h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><p>Android开发中，经常我们需要打不同的包，常用的维度就是debug，release，多个渠道等，如果每个包都需要对应一份代码，那么工作量就巨大并且难以维护（修改代码需要修改多处）。Android中使用Gradle打包，可以很好的解决打包这个问题，提供了充分的可配置选项，让我们在很多维度控制打包的细节，非常灵活，推荐看官方文档（墙外）。</p>
-<a id="more"></a>
-<h2 id="productFlavor"><a href="#productFlavor" class="headerlink" title="productFlavor"></a>productFlavor</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>productFlavor：产品风味。在多渠道打包是一般使用这个属性，可根据不同的渠道配置不同的内容。Gradle3.0之后配置flavor与之前略有不同，需要强制设置flavor的维度：flavorDimensions，否则gradle会报错，来个例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions(&apos;money&apos;)</span><br><span class="line">productFlavors &#123;</span><br><span class="line">    free &#123;</span><br><span class="line">        dimension &apos;money&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    paid &#123;</span><br><span class="line">        dimension &apos;money&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例子中定义了一个产品风味维度：money（是否需要钱钱），然后定义了两种风味：free和paid，注意两种风味的<code>dimension</code>属性相同都是<code>money</code>。然后使用<code>./gradlew assemble</code>打包，如果你配置了你会发现app/build/outputs/apk 下会打出这些包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apk/</span><br><span class="line">	free/</span><br><span class="line">		debug/</span><br><span class="line">			xxx.apk</span><br><span class="line">		release/</span><br><span class="line">			xxx.apk</span><br><span class="line">	paid/</span><br><span class="line">		debug/</span><br><span class="line">			xxx.apk</span><br><span class="line">		release/</span><br><span class="line">			xxx.apk</span><br></pre></td></tr></table></figure>
-<p>xxx.apk 命名规则是：<code>app-flavor-buildtype.apk</code></p>
-<p><code>./gradlew assemble</code>很粗暴，会打出所有的包。如果你只想打一个包，比如：paid的release包，那么可以使用以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./gradlew assemblePaidRelease</span><br></pre></td></tr></table></figure>
-<p>规则：<code>./gradlew assembleFlavorBuildtype</code>, buildtype（构建类型）指debug or release or 自己配置的buildtype。</p>
-<h3 id="flavorDimensions"><a href="#flavorDimensions" class="headerlink" title="flavorDimensions"></a>flavorDimensions</h3><p>产品风味维度，打包时可以使用多个维度组合的方式。例如定义下面这种方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions(&apos;money&apos;, &apos;channel&apos;)</span><br><span class="line">productFlavors &#123;</span><br><span class="line">    free &#123;</span><br><span class="line">        dimension &apos;money&apos;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    paid &#123;</span><br><span class="line">        dimension &apos;money&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    baidu &#123;</span><br><span class="line">        dimension &apos;channel&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    wandoujia &#123;</span><br><span class="line">        dimension &apos;channel&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后<code>./gradlew assemble</code>会打出 2x2=4个包，gralde会自动将两个维度的品味组合打包：free-baidu.apk, paid-baidu.apk, free-wandoujia.apk, paid-wandoujia.apk …</p>
-<h3 id="配置依赖"><a href="#配置依赖" class="headerlink" title="配置依赖"></a>配置依赖</h3><p>关于不同的风味需要配置哪些属性，这里就不细讲，感兴趣自己查文档。我这里遇到一个需求是，不同的产品风味，需要依赖不同的lib。例如：我有两套log系统（一套会上传log，一套不会），分别写在两个lib中，主工程中定义了Log.java继承与两个lib中的BaseLog.java，BaseLog.java中控制log的细节。现在需要根据log这个风味维度打出两种不同log的包。大概配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions(&apos;log&apos;)</span><br><span class="line">productFlavors &#123;</span><br><span class="line">    online &#123;</span><br><span class="line">        dimension &apos;log&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    local &#123;</span><br><span class="line">        dimension &apos;log&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    ...</span><br><span class="line">    onlineImplementation project(&apos;:libs:lib-log-online&apos;)</span><br><span class="line">    localImplementation project(&apos;:libs:lib-log-local&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主要看dependencies中两个配置：<code>onlineImplementation</code>，<code>localImplementation</code>分配表示online和local两种风味依赖两个本地不同的lib。gradle3.0之前是使用 <code>comple xxx</code>这里需要注意修改成<code>implementation</code>，命名规则依然是: <code>flavorImplementation</code>。</p>
-<p>这样就可以实现根据不同的风味，控制不同的依赖。具体的配置还有很多内容，推荐看官方文档，这里不再累述。</p>
-<h2 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h2><p><a href="https://developer.android.com/studio/build/build-variants.html" target="_blank" rel="noopener">https://developer.android.com/studio/build/build-variants.html</a></p>
-<p><a href="https://developer.android.com/studio/build/index.html" target="_blank" rel="noopener">https://developer.android.com/studio/build/index.html</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Android打包 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Android </tag>
-            
-            <tag> Gradle </tag>
             
         </tags>
         
