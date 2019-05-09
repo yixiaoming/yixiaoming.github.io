@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yixiaoming.github.io/2019/03/24/ViewModel%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
+    <loc>https://yixiaoming.github.io/categories/index.html</loc>
     
-    <lastmod>2019-04-21T03:33:39.000Z</lastmod>
+    <lastmod>2019-05-09T10:52:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yixiaoming.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-05-09T10:52:09.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yixiaoming.github.io/2019/03/24/LiveData%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
     
-    <lastmod>2019-04-21T03:33:32.000Z</lastmod>
+    <lastmod>2019-05-09T10:50:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yixiaoming.github.io/2019/03/24/ViewModel%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
+    
+    <lastmod>2019-04-21T03:33:39.000Z</lastmod>
     
   </url>
   
@@ -33,20 +47,6 @@
     <loc>https://yixiaoming.github.io/about/index.html</loc>
     
     <lastmod>2017-12-17T03:28:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yixiaoming.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-11-26T15:07:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yixiaoming.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-11-26T15:07:20.000Z</lastmod>
     
   </url>
   

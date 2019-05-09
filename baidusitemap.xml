@@ -1,88 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
-  <url>
-    <loc>https://yixiaoming.github.io/2019/03/24/ViewModel%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2019-04-21T03:33:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>ViewModel源码解析</title>
-        <pubTime>2019-03-24T01:31:41.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android源码解析系列" url="https://yixiaoming.github.io/categories/Android%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%B3%BB%E5%88%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>https://yixiaoming.github.io/2019/03/24/LiveData%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2019-04-21T03:33:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>LiveData源码解析</title>
-        <pubTime>2019-03-24T11:13:34.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android源码解析系列" url="https://yixiaoming.github.io/categories/Android%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%B3%BB%E5%88%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-05-09</lastmod>
+  </url>  <url>
+    <loc>https://yixiaoming.github.io/2019/03/24/ViewModel%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2019-04-21</lastmod>
+  </url>  <url>
     <loc>https://yixiaoming.github.io/2018/08/25/Android%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-04-21T03:33:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android事件分发机制详解</title>
-        <pubTime>2018-08-25T04:22:04.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android事件分发" url="https://yixiaoming.github.io/categories/Android%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-04-21</lastmod>
+  </url>  <url>
     <loc>https://yixiaoming.github.io/2017/12/18/Hexo%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/</loc>
-    <lastmod>2017-12-31T04:06:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo命令清单</title>
-        <pubTime>2017-12-18T04:37:04.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="https://yixiaoming.github.io/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
+    <lastmod>2017-12-31</lastmod>
+  </url>
 </urlset>
