@@ -4,7 +4,7 @@ tags:
   - Android
 categories:
   - Android源码解析系列
-comments: true
+comment: true
 date: 2019-03-24 09:31:41
 ---
 
