@@ -140,15 +140,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-<<<<<<< HEAD
-    app_id    : "hg5bXEHBb0CgHnhtcCbqJTMS-gzGzoHsz" # LeanCloud App id
-    app_key   : "MnlJJBjm8DdpAyLmH3xWYwpg" # LeanCloud App key
-    app_class : "read_number" # LeanCloud App class
-=======
-    app_id    : hg5bXEHBb0CgHnhtcCbqJTMS-gzGzoHsz" # LeanCloud App id
+    app_id    : hg5bXEHBb0CgHnhtcCbqJTMS-gzGzoHsz # LeanCloud App id
     app_key   : MnlJJBjm8DdpAyLmH3xWYwpg # LeanCloud App key
     app_class : read_number # LeanCloud App class
->>>>>>> 配置评论， leanclould
 
 
 ## => Search
