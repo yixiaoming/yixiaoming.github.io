@@ -10,12 +10,6 @@
 	{%- include snippets/get-sources.html -%}
 	{%- assign _sources = __return -%}
 	<div class="gitalk-wrapper" id="js-gitalk-container"></div>
-<<<<<<< HEAD
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-=======
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
->>>>>>> 配置评论， leanclould
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 	<script>
 		window.Lazyload.css('{{ _sources.gitalk.css }}');
 		window.Lazyload.js('{{ _sources.gitalk.js }}', function() {
@@ -25,11 +19,7 @@
 				clientSecret: '{{ site.comments.gitalk.clientSecret }}',
 				repo: '{{ site.comments.gitalk.repository }}',
 				owner: '{{ site.comments.gitalk.owner }}',
-<<<<<<< HEAD
-				admin: ['{{ site.gitalk.owner }}']
-=======
 				admin: ['{{ site.comments.gitalk.owner }}']
->>>>>>> 配置评论， leanclould
 			});
 			gitalk.render('js-gitalk-container');
 		});
