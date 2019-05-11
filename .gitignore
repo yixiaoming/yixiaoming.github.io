@@ -4,6 +4,6 @@
 # jekyll
 Gemfile.lock
 package-lock.json
-_site/
-.sass-cache/
+_site
+.sass-cache
 .jekyll-metadata
