@@ -1,12 +1,24 @@
 header:
-
-  - titles:
-      en      : &EN       Archive
-      zh      : &ZH  归档
+  - title     : 主页
+    url: /index.html
+  - title     : 归档
     url: /archive.html
-  - titles:
-      en      : &EN       About
-      zh      : &ZH  关于
+  - title     : 关于
     url: /about.html
   - title     : GitHub
     url       : https://github.com/yixiaoming
+
+docs-android:
+  - title:      Android源码解读系列
+    children:
+      - title:  LiveData源码解读
+        url:    /docs/en/quick-start
+      - title:  ViewModel源码解读
+        url:    /docs/en/structure
+  - title:      Android开源框架系列
+    children:
+      - title:  Retrofit
+        url:    /docs/en/configuration
+      - title:  EventBus
+        url:    /docs/en/navigation
+
