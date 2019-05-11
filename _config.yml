@@ -128,10 +128,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : e505ad15f82900fcf806
-    clientSecret: b88fe59f278e90f0ef6f48e8c617a38a52291d6c
+    clientID    : c1ad9ceffa8efa8c047f
+    clientSecret: 4e416bff32563c277317dcac717fce4f62059144
     repository  : yixiaoming.github.io # GitHub repo
     owner       : yixiaoming # GitHub repo owner
+    admin       : yixiaoming
 
 ## => Pageview
 ##############################
