@@ -1,5 +1,6 @@
 ---
 title: ViewModel源码解析
+key: 20180320-android-viewmodel-source
 author: Miles.y
 tags:
   - Android源码解析
