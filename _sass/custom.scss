@@ -1,3 +1,23 @@
 /* start custom scss snippet */
+ul.toc {
+  .toc-h2,
+  .toc-h3,
+  .toc-h4,
+  .toc-h5,
+  .toc-h6 {
+    &, a {
+      font-size: map-get($base, font-size);
+      line-height: map-get($base, line-height);
+    }
+  }
+}
 
+.article__content {
+  code {
+    font-size: map-get($base, font-size);
+  }
+  p {
+    font-size: map-get($base, font-size);
+  }
+}
 /* end custom scss snippet */
