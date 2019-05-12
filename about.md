@@ -15,9 +15,16 @@ comment: false
 
 **主要技能:**
 - Android
+
 - SpringBoot
+
 - Python
 
+**联系我:**
+
+**Github:** [https://github.com/yixiaoming](https://github.com/yixiaoming)
+
+**Emial:**  [yixiaoming.me@qq.com](mailto:yixiaoming.me@qq.com)
 
 
 ### 博客模版

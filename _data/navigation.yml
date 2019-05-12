@@ -1,12 +1,14 @@
 header:
-  - title     : 主页
+  - title     : 最新
     url: /index.html
+  - title     : Android系列
+    url: /android/index.html
+  - title     : 设计模式相关
+    url: /design_patterns.html
   - title     : 归档
     url: /archive.html
   - title     : 关于
     url: /about.html
-  - title     : GitHub
-    url       : https://github.com/yixiaoming
 
 docs-android:
   - title:      Android源码解读系列
