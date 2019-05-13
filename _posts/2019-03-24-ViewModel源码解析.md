@@ -14,11 +14,11 @@ date: 2019-03-24 09:31:41
 
 本片文章主要解读Android官方推荐组件ViewModel的底层实现原理，ViewModel作为Activity/Fragment等组件的数据容器，可以避免我们在View层自己创建并保存数据，都交给ViewModel管理，在横竖屏切换等场景也能很好适配。让我们再不需要再onSaveInstanceState()来保存临时变量，并且ViewModel可能很好的适应组件的生命周期，在Activity等组件onDestroy()时自动清除数据避免内存泄漏。
 
-<!-- more -->
-
 先来一张简图：
 
 ![image-20190324122440712]({{ site.url }}/images/ViewModel源码解析/image-20190324122440712.png)
+
+<!-- more -->
 
 ## 源码解读
 
