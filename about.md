@@ -34,3 +34,10 @@ comment: false
 开源地址：[https://github.com/kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
 配置文档：[https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
+
+
+### 用到的工具
+
+Emoji : [https://www.webfx.com/tools/emoji-cheat-sheet/](https://www.webfx.com/tools/emoji-cheat-sheet/)
+
+TinyPng : [https://tinypng.com/](https://tinypng.com/)
