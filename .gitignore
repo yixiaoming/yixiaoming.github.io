@@ -1,9 +1,13 @@
 # General
 .DS_Store
 
+# vscode
+.vscode
+
 # jekyll
 Gemfile.lock
 package-lock.json
 _site
 .sass-cache
 .jekyll-metadata
+*.pyc
