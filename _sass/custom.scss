@@ -20,4 +20,26 @@ ul.toc {
     font-size: map-get($base, font-size);
   }
 }
+
+// start for Simple-Jekyll-Search
+#results-container {
+  li {
+    list-style-type: none; 
+    line-height: 2em;
+    a.title{
+      // color:rgb(226, 79, 84);
+      color: #FED55C;
+      font-size: 1.5em;
+    }
+    span.tag {
+      color: #d2c2bc;
+      font-size: 1em;
+    }
+    span.date {
+      color: #28ceaa;
+      font-size: 1em;
+    }
+  }
+}
+// end for Simple-Jekyll-Search
 /* end custom scss snippet */
