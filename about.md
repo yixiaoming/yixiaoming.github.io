@@ -11,9 +11,10 @@ comment: false
 
 个人博客，主要记录自己平时的学习内容和总结，欢迎交流和分享！
 
-毕业2年，在大厂搬过砖，目前正准备向高阶奋斗！
+毕业2年，在大厂搬过砖，目前正准备向一个阶段努力！
 
 **主要技能:**
+
 - Android
 
 - SpringBoot
@@ -31,13 +32,13 @@ comment: false
 
 在此非常感谢博客主题的开源作者: [Tian Qi](https://github.com/kitian616)
 
-开源地址：[https://github.com/kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)
+**开源地址：**[https://github.com/kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
-配置文档：[https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
+**配置文档：**[https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
 
 
 ### 用到的工具
 
-Emoji : [https://www.webfx.com/tools/emoji-cheat-sheet/](https://www.webfx.com/tools/emoji-cheat-sheet/)
+**Emoji :** [https://www.webfx.com/tools/emoji-cheat-sheet/](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
-TinyPng : [https://tinypng.com/](https://tinypng.com/)
+**Tinypng :** [https://tinypng.com/](https://tinypng.com/) (要使用图片压缩脚本，请参考: [Tinypng图片压缩脚本]({% post_url 2019-05-15-Tinypng批量压缩脚本 %})。)
