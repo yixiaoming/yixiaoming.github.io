@@ -16,7 +16,7 @@ date: 2019-03-24 09:31:41
 
 先来一张简图：
 
-![image-20190324122440712]({{ site.url }}/images/ViewModel源码解析/image-20190324122440712.png)
+![image-20190324122440712]({{site.baseurl}}/images/ViewModel源码解析/image-20190324122440712.png)
 
 <!-- more -->
 
